@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+    background-color: #fafafa;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;
+}
+
+
+header{
+width: 100%;
+background-color: white;
+display: flex;
+margin-top: -2px;
+z-index: 99999999999999999999;
+border-top: 2px solid rgba(0, 0, 0, 0.05);
+border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+text-transform: capitalize;
+font-weight: 550;
+color: #313133;
+font-size: 18px;
+}
+
+.stickyhead{
+    width: 100%;
+
+}
+
+.stickyhead img{
+    width: 100%;
+}
+
+.navcontainer{
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    margin: auto;
+
+    background-color: white;
+justify-content: space-between;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+
+
+.logo{
+    height: 84px;
+}
+
+.logo img{
+    width: 180px;
+    height: 84px;
+    object-fit: contain;
+}
+
+.navcontainer input{
+
+    width: 400px;
+    padding: 8px;
+    border: 1px solid #a3a3a6;
+    border-radius: 4px;
+    outline: none;
+}
+
+.navcontainer button{
+
+    width: fit-content;
+    padding: 7px;
+    color: white;
+    border: 1px solid #f68b1e;
+    background-color: #f68b1e;
+    border-radius: 4px;
+    outline: none;
+    font-size: 17px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 19px;
+}
+ion-icon {
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  .herodata{
+    width: 100%;
+    display: flex;
+    gap: 19px;
+    margin-top: 40px;
+  }
+
+  .dataone{
+    border-radius: 7px;
+    width: 28%;
+    padding: 14px;
+    background-color: white;
+  }
+
+  .datatwo{
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  .datathree{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+    width: 30%;
+
+    border-radius: 7px;
+  }
+
+  .squareone{
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    background-color: white;
+  }
+
+  .squareone img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+  }
+
+  .squaretwo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+  }
+
+  .squaretwo{
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    background-color: white;
+  }
+
+
+
+  .dataone ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    gap: 14px;
+    ;
+  }
+
+  .dataone ul li{
+    display: flex;
+    gap: 9px;
+   transition: 0.5s;
+    font-size: 14px;
+    cursor: pointer;
+    color: #313133;
+  }
+
+  .dataone ul li:hover{
+ color: #f68b1e;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+  
+  .section {
+    margin: 0 ;
+    padding-block: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .containers {
+    max-width: 100%;
+    height: 100%;
+
+  }
+
+  .swiper, swiper-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+    height: 100%;
+}
+  
+  .swiper-button-next::after, .swiper-button-prev::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 1rem;
+    width: 300px;
+    height: 50px;
+    opacity: 0.75;
+    border-radius: 50%;
+    color: #f68b1e;
+
+  }
+
+  .swiper-pagination{
+    color: #f68b1e;
+  }
+  .swiper-slide{
+    border-radius: 9px;
+  }
+
+  .swiper-slide{
+    object-fit: fill;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    color: green;
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px);
+    background: #f68b1e;
+}
+
+.productcontainer{
+  width: 100%;
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.product{
+  height: 300px;
+  background-color: #b5b3b3;
+}
+
+  @media screen and (max-width:1250px) {
+    .container{
+      width: 97%;
+    }
+
+    .navlinks{
+      display: none;
+    }
+    .navcontainer{
+      width: 97%;
+    }
+    .dataone{
+      display: none;
+    }
+    .datathree{
+      display: none;
+    }
+  }
