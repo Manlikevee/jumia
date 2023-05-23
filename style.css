@@ -389,7 +389,7 @@ outline: 1px solid slategrey;
 }
 .sa .swiper-slide {
   width: calc((100% - 40px) / 5); /* Adjust card width and spacing as needed */
-  height: 200px; /* Adjust card height as needed */
+  height: fit-content; /* Adjust card height as needed */
   background-color: white; /* Adjust card background color as needed */
   display: flex;
   justify-content: center;
@@ -443,7 +443,19 @@ border-radius: 3px;
     .container{
       width: 97%;
     }
+    .cattitle{
+      font-size: 15px;
+    }
 
+    .flex{
+      font-size: 14px !important;
+      text-align: start;
+    }
+    .whitebg {
+      background-color: #fff;
+      width: 100%;
+      padding: 11px;
+  }
     .navlinks{
       display: none;
     }
@@ -456,6 +468,16 @@ border-radius: 3px;
     .datathree{
       display: none;
     }
+    .logo img {
+      width: 180px;
+      height: 57px;
+      object-fit: cover;
+  }
+  .logo  {
+justify-content: center;
+    height: 57px;
+    object-fit: contain;
+}
   }
 
 
