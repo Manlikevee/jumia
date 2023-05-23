@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'>
     <title>Jumia Nigeria | Online Shopping for Groceries, Appliances &amp; More! </title>
     <meta charset="utf-8"><title>Jumia Nigeria | Online Shopping for Groceries, Appliances &amp; More!</title><meta property="og:type" content="product"><meta property="og:site_name" content="Jumia Nigeria"><meta property="og:title" content="Jumia Nigeria | Online Shopping for Groceries, Appliances &amp; More!"><meta property="og:description" content="Jumia Nigeria the #1 Online store in Nigeria - Shop Online for All Kinds of Products &amp; Enjoy Great Prices And Offers ✓ Best prices in Nigeria ✓ Online shop you can trust ✓ Order now and enjoy pay on delivery! "><meta property="og:url" content="/"><meta property="og:image" content="https://ng.jumia.is/cms/jumialogonew.png"><meta property="og:locale" content="en_NG"><meta name="title" content="Jumia Nigeria | Online Shopping for Groceries, Appliances &amp; More!"><meta name="robots" content="index, follow"><meta name="description" content="Jumia Nigeria the #1 Online store in Nigeria - Shop Online for All Kinds of Products &amp; Enjoy Great Prices And Offers ✓ Best prices in Nigeria ✓ Online shop you can trust ✓ Order now and enjoy pay on delivery! "><link rel="alternate" href="android-app://com.jumia.android/JUMIA/NG?utm_source=google&amp;utm_medium=organic&amp;adjust_tracker=j1hd8h&amp;adjust_campaign=GOOGLE_SEARCH&amp;adjust_adgroup=https%3A%2F%2Fwww.jumia.com.ng%2F"><link rel="canonical" href="https://www.jumia.com.ng/">
@@ -120,12 +120,38 @@
         
         
         <br>
+
+        <div class="whitebg">
+
+      
+        <div class="minititle">
+          <div class="cattitle flex"> <span> Mobile Phones Official Store Deals</span> <div class="seemore">See More</div></div>
+        </div>
+   
         <div class="productcontainer" id="productdiv">
 
     
 
       </div>
-     
+    </div>
+
+
+
+
+    <div class="whitebg">
+
+      
+      <div class="minititle">
+        <div class="cattitle "> <span> Large Appliances (Pay on Delivery)</span> <div class="seemore">See More</div></div>
+      </div>
+ 
+      <div class="productcontainer" id="appliancediv">
+
+  
+
+    </div>
+  </div>
+
     </div>
 
 </body>
@@ -381,6 +407,120 @@ productName.textContent = product.name;
 
   productdiv.appendChild(div);
 });
+
+
+const appliances = [
+  {
+    imageUrl: `https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/397664/1.jpg?9493`,
+    name: `XIAOMI Redmi Note 12 6.67'' 8GB 128GB ROM Android 13 - Onyx Gray`,
+    price: '₦ 150,000'
+  },
+  {
+    imageUrl: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/204592/1.jpg?2015',
+    name: `XIAOMI Redmi 10 2022 - 6.5" (4GB RAM, 128GB ROM) - Carbon Gray`,
+    price: '₦ 118,650'
+  },
+
+  {
+    imageUrl: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/909098/1.jpg?3607',
+    name: 'XIAOMI Redmi Note 12 Pro 5G 8GB RAM 256GB ROM 6.67 Dual Sim',
+    price: '₦ 195,878'
+  },
+ 
+
+  {
+    imageUrl: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/98/73349/1.jpg?7805',
+    name: ' Samsung Galaxy A73 5G - 6.7" 6GB/128GB Memory - White',
+    price: '₦ 370,000'
+  },
+  {
+    imageUrl: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/40/037857/1.jpg?0943',
+    name: 'Samsung Galaxy A54 5G 6.4" 256GB/8GB Facial Recognition',
+    price: '₦ 315,000'
+  },
+  {
+    imageUrl: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/48/4571202/1.jpg?6274',
+    name: 'XIAOMI A1 Plus, 6.52" 4G LTE, 2GB/32GB Memory, Fingerprint, Face ID Recognition,',
+    price: '₦ 115,878'
+  },
+  {
+    imageUrl: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/69/7504971/1.jpg?1923',
+    name: 'itel P40 6.6" Screen, 64GB ROM + Up To 7GB RAM, 6000mAh 18W',
+    price: '₦ 65,878'
+  },
+  {
+    imageUrl: 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/24/3796591/2.jpg?0919',
+    name: 'Tecno Spark 10- 6.6" - 8GB/128GB，50MP+Q Rear Camera，5000mAh-Black',
+    price: '₦ 95,878'
+  },
+
+
+
+
+
+
+
+  // Add more products as needed...
+];
+
+const appliancess = document.getElementById('appliancediv');
+
+
+appliances.forEach(appliance => {
+  const appliancesdiv = document.createElement('div');
+  appliancesdiv.className = 'product';
+
+
+  const addButton = document.createElement('button');
+  const Buttondiv = document.createElement('div');
+  Buttondiv.className = 'butbutton'
+  
+
+
+  addButton.type = 'button';
+  addButton.className = 'botton';
+  addButton.name = 'action';
+  addButton.value = 'in';
+  addButton.textContent = 'Add To Cart';
+
+
+  Buttondiv.appendChild(addButton);
+
+const imgdiv = document.createElement('div');
+imgdiv.className = 'productimg'
+
+
+const productImg  = document.createElement('img');
+productImg.src = appliance.imageUrl;
+  productImg.alt = 'Product Image';
+  productImg.loading = 'lazy';
+
+  imgdiv.appendChild(productImg);
+
+const productName = document.createElement('div');
+productName.className = 'productname';
+
+
+
+const productPrice = document.createElement('div');
+productPrice.className = 'productprice';
+
+
+productName.textContent = appliance.name;
+  productPrice.textContent = appliance.price;
+
+  appliancesdiv.appendChild(imgdiv);
+  appliancesdiv.appendChild(productName);
+  appliancesdiv.appendChild(productPrice);
+  appliancesdiv.appendChild(Buttondiv);
+  
+
+  appliancess.appendChild(appliancesdiv);
+});
+
 </script>
+
+
+
 
 </html>
