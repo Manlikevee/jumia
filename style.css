@@ -10,6 +10,7 @@ body{
 
     background-color: #fafafa;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 
 }
 nav {
@@ -608,6 +609,9 @@ border-radius: 3px;
     .container{
       width: 97%;
     }
+    .cat {
+      padding: 10px;
+    }  
     .herodata{
       flex-direction: column;
     }
@@ -663,7 +667,7 @@ border-radius: 3px;
   @media screen and (max-width:600px) {
     .allitemgrid {
       gap: 16px;
-      grid-template-columns: repeat(auto-fit, minmax(153px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(123px, 1fr));
   }
   .container {
     width: 98%;
