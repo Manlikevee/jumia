@@ -669,6 +669,13 @@ border-radius: 3px;
       gap: 16px;
       grid-template-columns: repeat(auto-fit, minmax(123px, 1fr));
   }
+  .sidebar .sidebar-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+}
   .container {
     width: 98%;
 }
