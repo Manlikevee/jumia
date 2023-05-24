@@ -21,6 +21,10 @@
         <img src="img/oraimo-top-strip.gif" alt="">
     </div>
 
+    <div class="stickyhead2">
+      <img src="https://ng.jumia.is/cms/0-1-cpr/2023/new-top-strip/free-delivery-mobile-strip_1.gif" alt="">
+    </div>
+
     <header>
         <div class="navcontainer">
             <div class="logo">
@@ -28,20 +32,20 @@
               </div>
       
               <div class="navlinks">
-      <input type="text"> <button>Search</button>
+      <input type="text" placeholder="Search products, brands and categories"> <button>Search</button>
               </div>
       
               <div class="navlinks">
-                <ion-icon name="person-add-outline"></ion-icon>     account <ion-icon name="chevron-down-outline"></ion-icon>
+                <i class="fa-solid fa-user"></i>Account
               </div>
       
               <div class="navlinks">
-                 help <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                <i class="fa-solid fa-circle-question"></i>Help
               </div> 
       
       
               <div class="navlinks">
-                <i class="fa-solid fa-cart-shopping"></i>    cart
+                <i class="fa-solid fa-cart-shopping"></i>Cart
               </div>
         </div>
        
@@ -162,16 +166,15 @@
                 </ul>
             </div>
             <div class="datatwo">
+              
+<div class="mega-menu" id="menu2">
+  <!-- Content for Menu 2 -->
+</div>
                 <section class="section slider-section">
                     <div class="containers slider-column">
                       <div class="swiper swiper-slider">
-                        <div class="swiper-wrapper">
-                          <img class="swiper-slide" src="https://ng.jumia.is/cms/0-1-weekly-cps/0-2023/w21-top-brands/tecno-brand-day/Desktop_Homepage_Slider__CTA_712x384.png" alt="Swiper">
-                          <img class="swiper-slide" src="https://ng.jumia.is/cms/0-1-initiatives/jbps/updated-jbp-2022/TCL/Desktop_Homepage_Slider__712x384_copy_2.png" alt="Swiper">
-                          <img class="swiper-slide" src="https://ng.jumia.is/cms/0-CMS-MIGRATION-2020/adidas/2023/May/712x384-copy-new.jpg" alt="Swiper">
-                          <img class="swiper-slide" src="https://ng.jumia.is/cms/0-1-cpr/2023/large-item-updated/design-update/Desktop_Homepage_Slider__712x384.png" alt="Swiper">
-                          <img class="swiper-slide" src="https://ng.jumia.is/cms/0-1-weekly-cps/0-2023/w21-top-brands/fitness-week/712x384.jpg" alt="Swiper">
-                          <img class="swiper-slide" src="https://ng.jumia.is/cms/0-1-initiatives/jumia-pay/2023/may/Artboard_1_copy.png" alt="Swiper">
+                        <div class="swiper-wrapper" id="swipe-wrappers">
+
                         </div>
                         <span class="swiper-pagination"></span>
                         <span class="swiper-button-prev"></span>
@@ -251,6 +254,10 @@
         </section>
         
         
+
+
+
+
         <br>
 
         <div class="whitebg">
@@ -294,6 +301,43 @@
 <script src="https://www.iat.gov/assets/icons/fontawesome/js/all.js"></script>
 <script defer src="https://www.iat.gov/assets/icons/fontawesome/js/v4-shims.js"></script>
 <script>
+
+
+  // Array containing image links
+  const swipeimageLinks = [
+"https://ng.jumia.is/cms/0-1-initiatives/jbps/updated-jbp-2022/cocacola/Desktop_homepage_slider__712x384_(Shop_Now).jpg",
+"https://ng.jumia.is/cms/0-1-initiatives/jumia-pay/2023/may/Artboard_1_copy.png",
+"https://ng.jumia.is/cms/0-1-weekly-cps/0-2023/w21-top-brands/Desktop_Homepage_Slider_712x384.png",
+"https://ng.jumia.is/cms/0-1-cpr/2023/MTN/712x384_copy_20_off.jpg",
+"https://ng.jumia.is/cms/0-1-initiatives/jbps/updated-jbp-2022/Defacto/updated/Desktop_homepage_slider__712x384.jpg",
+"https://ng.jumia.is/cms/0-1-initiatives/jbps/updated-jbp-2022/TCL/Desktop_Homepage_Slider__712x384_copy_2.png",
+"https://ng.jumia.is/cms/0-CMS-MIGRATION-2020/adidas/2023/May/712x384-copy-new.jpg",
+"https://ng.jumia.is/cms/0-1-cpr/2023/large-item-updated/design-update/Desktop_Homepage_Slider__712x384.png",
+"https://ng.jumia.is/cms/0-1-weekly-cps/0-2023/w21-top-brands/fitness-week/712x384.jpg",
+"https://ng.jumia.is/cms/0-1-initiatives/jumia-pay/2023/may/Artboard_1_copy.png"
+];
+
+// Select the container element where you want to generate the divs
+const swipecontainer = document.getElementById('swipe-wrappers');
+
+// Loop through the image links array
+swipeimageLinks.forEach(swipeimageLink => {
+  // Create a new <div> element with the 'swiper-slide' class
+  // Create an <img> element and set the 'src' and 'alt' attributes
+  const img = document.createElement('img');
+  img.src = swipeimageLink;
+  img.className ='swiper-slide';
+  img.alt = '';
+
+  // Append the <img> element to the <div> element
+
+  // Append the <div> element to the container
+    swipecontainer.appendChild(img);
+});
+
+
+
+
 const swiper = new Swiper(".swiper-slider", {
   // Optional parameters
   centeredSlides: true,
@@ -650,6 +694,11 @@ productName.textContent = appliance.name;
 
   appliancess.appendChild(appliancesdiv);
 });
+
+
+
+
+
 
 </script>
 
