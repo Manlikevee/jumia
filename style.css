@@ -118,7 +118,7 @@ nav.open ~ .overlay {
 ::-webkit-scrollbar {
   width: 1px; 
    background-color: rgba(0,0,0,0);
-  -webkit-border-radius: 80px;
+  -webkit-border-radius: 0px;
 }
 ::-webkit-scrollbar:hover {
   background-color: rgba(0, 0, 0, 0.09);
@@ -126,11 +126,11 @@ nav.open ~ .overlay {
 
 ::-webkit-scrollbar-thumb:vertical {
   background: rgba(0,0,0,0.61);
-  -webkit-border-radius: 80px;
+  -webkit-border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb:vertical:active {
   background: rgba(0,0,0,0.61);
-  -webkit-border-radius: 80px;
+  -webkit-border-radius: 0px;
 }
 
 
@@ -158,15 +158,7 @@ font-size: 18px;
     width: 100%;
 }
 
-.navcontainer{
-    display: flex;
-    align-items: center;
-    width: 1200px;
-    margin: auto;
 
-    background-color: white;
-justify-content: space-between;
-}
 .navcontainers{
   width: 70%;
   align-items: center;
@@ -179,7 +171,92 @@ justify-content: end;
   margin-top: 0px;
   margin-bottom: 40px;
 }
-.container{
+
+@media screen and (max-width:9700px) {
+  .container{
+    display: flex;
+    align-items: center;
+    width: 5300px;
+    margin: auto;
+    padding: 10px;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+.navcontainer{
+  display: flex;
+  align-items: center;
+  width: 5300px;
+  margin: auto;
+  background-color: white;
+justify-content: space-between;
+}
+}
+
+@media screen and (max-width:5700px) {
+  .container{
+    display: flex;
+    align-items: center;
+    width: 3300px;
+    margin: auto;
+    padding: 10px;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+.navcontainer{
+  display: flex;
+  align-items: center;
+  width: 3300px;
+  margin: auto;
+
+  background-color: white;
+justify-content: space-between;
+}
+}
+
+@media screen and (max-width:3900px) {
+  .container{
+    display: flex;
+    align-items: center;
+    width: 2300px;
+    margin: auto;
+    padding: 10px;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+.navcontainer{
+  display: flex;
+  align-items: center;
+  width: 2300px;
+  margin: auto;
+
+  background-color: white;
+justify-content: space-between;
+}
+}
+
+@media screen and (max-width:2900px) {
+  .container{
+    display: flex;
+    align-items: center;
+    width: 2000px;
+    margin: auto;
+    padding: 10px;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+.navcontainer{
+  display: flex;
+  align-items: center;
+  width: 2000px;
+  margin: auto;
+
+  background-color: white;
+justify-content: space-between;
+}
+}
+
+@media screen and (max-width:2000px) {
+  .container{
     display: flex;
     align-items: center;
     width: 1200px;
@@ -188,15 +265,27 @@ justify-content: end;
     flex-direction: column;
     background-color: #fafafa;
 }
+.navcontainer{
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin: auto;
+
+  background-color: white;
+justify-content: space-between;
+}
+  
+}
+
 
 
 .logo{
-    height: 84px;
+    height: 67px;
 }
 
 .logo img{
     width: 180px;
-    height: 84px;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -257,6 +346,7 @@ ion-icon {
   .datatwo{
     width: 100%;
     border-radius: 10px;
+    max-width: 700px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
   }
@@ -397,11 +487,15 @@ ion-icon {
 .productcontainer{
   margin-top: 10px;
   width: 100%;
+  
   display: grid;
   align-items: center;
   gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
+
+
+
 
 .allitemgrid{
   width: 100%;
@@ -592,20 +686,203 @@ border-radius: 3px;
 }
 
 .productdiv{
+  width: 100%;
   display: flex;
   gap: 40px;
   margin-top: 40px;
+
   
 }
 
 .productcheck{
   width: 25%;
   position: sticky;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   top: 19px;
   height: fit-content;
+  margin-top: 5px;
   padding: 20px;
   background-color: white;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+}
 
+.myproductcontainer{
+  background-color: white;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  
+}
+.productlinks  {
+margin-top: 0px;
+padding-left: 20px;
+}
+
+.productlinks ul li{
+  list-style-type: none;
+  font-size: .875rem;
+  color: #313133;
+}
+
+#loader {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.skeleton-card {
+  margin-top: 10px;
+  height: 300px;
+  border-radius: 3px;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  background-color: #eaeaea;
+}
+
+#loadingIndicator .productimg  {
+  width: 100%;
+  height: 179px;
+  background-color: #bfbfbf;
+  border-radius: 5px;
+  background-image: url('img/star-inside-circle\ \(2\).png');
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: center;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-fixed.show {
+  opacity: 1;
+  box-shadow: 0px 1px 7px rgb(198, 198, 198);
+}
+
+
+#loadingIndicator .titleloada{
+  margin-top: 9px;
+  background-color: #bfbfbf;
+  padding: 7px;
+  border-radius: 3px;
+}
+#loadingIndicator .productprice{
+  background-color: #bfbfbf;
+  padding: 7px;
+  width: 40%;
+}
+
+#loadingIndicator .butbutton{
+  margin-top: 9px;
+  border-radius: 5px;
+  background-color: #bfbfbf;
+  padding: 15px;
+}
+.skeleton-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0));
+  animation: load 1s infinite;
+}
+
+@keyframes load {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .skeleton-card::after {
+    animation: none;
+  }
+}
+
+.filtersection{
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+.filterinput{
+  width: 100%;
+  display: flex;
+align-items: center;
+font-size: .885rem;
+color: #313133;
+height: 100%;
+}
+
+.filterinput input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the label to resemble a checkbox */
+.filterinput label {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Create the checkbox visual */
+.filterinput label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Style the checkbox when it's checked */
+.filterinput input[type="checkbox"]:checked + label:before {
+  background-color: #f68b1e;
+}
+
+/* Style the checkmark inside the checkbox */
+.filterinput label:after {
+  content: "\2713"; /* Checkmark symbol */
+  display: none;
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Show the checkmark when the checkbox is checked */
+.filterinput input[type="checkbox"]:checked + label:after {
+  display: block;
+}
+
+.fi{
+  width: 30px;
+}
+.productlinks ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .sasa{
@@ -631,6 +908,7 @@ border-radius: 3px;
       display: flex;
       position: sticky;
       z-index: 99999999999;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
     }
     .cattitle{
       font-size: 15px;
@@ -662,7 +940,7 @@ border-radius: 3px;
   }
     .logo img {
       width: 180px;
-      height: 57px;
+      height: 100%;
       object-fit: cover;
   }
 
