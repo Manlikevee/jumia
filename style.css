@@ -596,6 +596,14 @@ border-radius: 7px;
   color: #fff;
   width: 100%;
   text-align: center;
+  border: 1px solid #f68b1e;
+  transition: 0.5s
+}
+
+.botton:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black;
 }
 
 .productprice{

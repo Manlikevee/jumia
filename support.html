@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Preview</title>
+    <style>
+      .preview-container {
+        width: 400px;
+        height: 300px;
+        border: 1px solid #ccc;
+        margin: 20px;
+        overflow: hidden;
+      }
+
+      .preview-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="urlInput">Website URL:</label>
+      <input type="text" id="urlInput" />
+      <button onclick="previewWebsite()">Preview</button>
+    </div>
+    <div class="preview-container">
+      <iframe id="previewIframe" class="preview-iframe" src="" frameborder="0"></iframe>
+    </div>
+
+    <script>
+      function previewWebsite() {
+        const url = document.getElementById("urlInput").value;
+        const previewIframe = document.getElementById("previewIframe");
+
+        // Set the source of the iframe to the specified website URL
+        previewIframe.src = url;
+      }
+    </script>
+  </body>
+</html>
